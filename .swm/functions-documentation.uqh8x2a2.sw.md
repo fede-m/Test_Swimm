@@ -61,7 +61,7 @@ This snippet defines a method called <SwmToken path="/src/Functions.java" pos="2
 
 </SwmSnippet>
 
-Finally, with this method we put everything together and determine if the three numbers for a Pythagorean Triple or not.
+Finally, with the method <SwmToken path="/src/Functions.java" pos="31:7:7" line-data="    public static boolean isPythagoreanTriples(int a, int b, int c) {">`isPythagoreanTriples`</SwmToken> we can put everything together and determine if the three numbers form a Pythagorean Triple or not.
 
 <SwmSnippet path="/src/Functions.java" line="31">
 
@@ -70,13 +70,59 @@ Finally, with this method we put everything together and determine if the three 
 Takes three parameters as input and returns true if they form a Pythagorean Triple, false otherwise.
 
 ```java
-    public static boolean isPythagoreanTriple(int a, int b, int c) {
+    public static boolean isPythagoreanTriples(int a, int b, int c) {
         // TODO: Benutze in dieser Methode keine arithmetischen Operatoren (i.e. +, -, *, /, % etc.)!
 
-        //if(sumOfSquares(a,b)==square(c)){
-        //    return true;
-        //}
+        if(sumOfSquares(a,b)==square(c)){
+            return true;
+        }
         return false;
+    }
+```
+
+---
+
+</SwmSnippet>
+
+```mermaid
+graph TD
+    A[ isPythagoreanTriple] --> |a| B( sumOfSquares)
+    A --> |b| B
+    A --> |c| C[ square]
+    B --> D{Equal to}
+    C --> D
+    D --> |true| E(True)
+    D --> |false| F(False)
+
+
+    
+
+%% Swimm:
+%% graph TD
+%%     A[ <SwmToken path="/src/Functions.java" pos="31:7:7" line-data="    public static boolean isPythagoreanTriple(int a, int b, int c) {">`isPythagoreanTriple`</SwmToken>] --> |a| B( <SwmToken path="/src/Functions.java" pos="8:7:7" line-data="    public static int sumOfSquares(int a, int b) {">`sumOfSquares`</SwmToken>)
+%%     A --> |b| B
+%%     A --> |c| C[ <SwmToken path="/src/Functions.java" pos="9:7:7" line-data="        int aSquared = square(a);">`square`</SwmToken>]
+%%     B --> D{Equal to}
+%%     C --> D
+%%     D --> |true| E(True)
+%%     D --> |false| F(False)
+%% 
+%% 
+%% &nbsp;&nbsp;&nbsp;&nbsp;
+```
+
+Blablabla&nbsp;
+
+<SwmSnippet path="/src/Functions.java" line="20">
+
+---
+
+My function <SwmToken path="/src/Functions.java" pos="16:7:7" line-data="    public static int cube(int n) {">`cube`</SwmToken>
+
+```
+    public static int sumOfCube(int a, int b) {
+        int c = a + b;
+        return cube(a) + cube(b);
     }
 ```
 

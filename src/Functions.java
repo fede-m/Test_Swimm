@@ -13,12 +13,12 @@ public class Functions {
         return sum;
     }
 
-    public static int cube(int n) {
+    public static int cubeOfSomething(int n) {
 
         return n*n*n;
     }
-    public static int sumOfCubes(int a, int b) {
-
+    public static int sumOfCube(int a, int b) {
+        int c = a + b;
         return cube(a) + cube(b);
     }
 
@@ -31,9 +31,9 @@ public class Functions {
     public static boolean isPythagoreanTriple(int a, int b, int c) {
         // TODO: Benutze in dieser Methode keine arithmetischen Operatoren (i.e. +, -, *, /, % etc.)!
 
-        //if(sumOfSquares(a,b)==square(c)){
-        //    return true;
-        //}
+        if(sumOfSquares(a,b)==square(c)){
+            return true;
+        }
         return false;
     }
 
